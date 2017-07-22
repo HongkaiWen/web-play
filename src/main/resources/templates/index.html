@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="UTF-8">
+    <title>webplay</title>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    <script th:src="@{js/demo.js}" ></script>
+</head>
+<body>
+this  is the home page.
+<input type="button" onclick="demo.hello();" value="test js import"/>
+<input type="button" onclick="ajaxTest()" value="test ajax"/>
+<input type="button" onclick="test302()" value="test 302"/>
+<input type="button" onclick="testForward()" value="test forward"/>
+<form action="form.do">
+    <input type="text" name="i_test">
+    <input type="submit" value="submit"/>
+</form>
+
+
+</body>
+<script type="text/javascript">
+    function ajaxTest(){
+        var res = $.ajax({url:"ping.do",async:false});
+        alert(res.responseText);
+    }
+    function test302(){
+        location.href="redirect302.do";
+    }
+    function testForward(){
+        location.href="forward.do";
+    }
+</script>
+</html>
