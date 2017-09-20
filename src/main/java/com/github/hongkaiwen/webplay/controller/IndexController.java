@@ -25,6 +25,10 @@ public class IndexController {
 
     @RequestMapping("/form")
     public String form(HttpServletRequest request, Model model){
+        System.out.println("stdout output by java");
+        System.err.println("stderr output by java");
+
+
         String i_test = request.getParameter("i_test");
         if("info".equals(i_test)){
             logger.info("info log output");
