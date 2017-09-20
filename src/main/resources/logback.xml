@@ -8,7 +8,7 @@
         <encoder>
             <pattern>%d{yyyy/MM/dd'T'HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
-        <target>System.out</target>
+        <!--<target>System.out</target>-->
     </appender>
 
     <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">

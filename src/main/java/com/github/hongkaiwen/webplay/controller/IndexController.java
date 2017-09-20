@@ -31,7 +31,7 @@ public class IndexController {
         } else if("error".equals(i_test)){
             logger.error("error log output");
         }
-        System.out.println(i_test);
+//        System.out.println(i_test);
         request.getSession(true).setAttribute("msg", i_test);
         return "submit";
     }
