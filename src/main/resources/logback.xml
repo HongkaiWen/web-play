@@ -26,7 +26,7 @@
             <onMatch>DENY</onMatch>
         </filter>
         <encoder>
-            <pattern>%date %level [%thread] %logger %msg%n</pattern>
+            <pattern>error-log:   %date %level [%thread] %logger %msg%n</pattern>
         </encoder>
     </appender>
 
