@@ -60,9 +60,9 @@
 
     <!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份) -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/logs/oss-paas.log</File>
+        <File>/data/logs/oss-paas-${HOSTNAME}.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <FileNamePattern>${catalina.base}/logs/oss-web.log.%i.bak</FileNamePattern>
+            <FileNamePattern>/data/app/logs/oss-web-${HOSTNAME}.log.%i.bak</FileNamePattern>
             <MinIndex>1</MinIndex>
             <MaxIndex>12</MaxIndex>
         </rollingPolicy>
